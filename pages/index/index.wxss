@@ -1,0 +1,76 @@
+/**index.wxss**/
+
+page{
+  height: 100%;
+}
+
+.container{
+  height: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 15rpx 15rpx;
+  background-clip: gainsboro;
+}
+
+chat-list{
+  flex: 1;
+  padding-bottom: 80rpx;
+}
+
+.chat-left, .chat-right{
+  align-items: center;
+  margin-top: 20rpx;
+}
+
+.chat-right {
+  text-align: right;
+}
+
+.chat-left text, .chat-right text {
+  flex: 1;
+  margin-left: 10rpx;
+  padding: 10rpx 5rpx;
+  border-radius:15rpx;
+  word-break: break-all;
+}
+
+.chat-left text {
+  background-color: whitesmoke;
+}
+
+.chat-right text {
+  text-align: right;
+  background-color: lightgoldenrodyellow;
+}
+
+.avatar-img {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 70rpx;
+}
+
+.ask-input-word {
+  width: 96%;
+  position: fixed;
+  padding: 5rpx;
+  bottom: 5rpx;
+  display: flex;
+  align-items: center;
+}
+
+.ask-input-word input {
+  background-clip: white;
+  border-radius: 15rpx;
+  flex: 1;
+  margin-right: 10rpx;
+}
+
+.pos-rel {
+  position: relative;
+}
+
+.pos-abs {
+  position: absolute;
+}

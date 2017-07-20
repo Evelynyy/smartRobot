@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="container">
+  <scroll-view class="scroll-view" scroll-y="true">
+    <view class="chat-list">
+      <block wx:for="{{chatList}}" wx:key="time">
+        <view class="chat-left" wx:if="{{item.orientation == 'l'}}">
+          <image class="avatar-img" src="../images/robot.png"></image>
+          <text>{{item.text}}</text>
+        </view>
+        <view class="chat-right" wx:if="{{item.orientation == 'r'}}">
+          <text>{{item.text}}{{item.url}}</text>
+          <image class="avatar-img" src="{{userInfo.avatarUrl}}"></image>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+
+  <form bindsubmit="sendMsg">
+    <view class="ask-input-word">
+      <input placeholder="请输入聊天内容" name="ask_word" type="text" bindconfirm="sendMsg" value="{{askWord}}" />
+      <button form-type="submit" size="mini">发送</button>
+    </view>
+  </form>
+  
+</view>
